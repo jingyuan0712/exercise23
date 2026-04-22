@@ -2,29 +2,70 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Exercise Button</title>
+<title>Exercise Layout</title>
 
 <style>
 body{
     font-family: Roboto, Arial;
-    padding: 50px;
+    background-color: #f5f5f5;
+    padding: 30px;
+}
+
+/* 整個框 */
+.container{
+    display: flex;
+    width: 900px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+/* 左邊清單 */
+.left{
+    width: 250px;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
+
+.item{
+    background-color: #d8f5d0;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* 中間圖片 */
+.center{
+    width: 450px;
+    text-align: center;
+    padding: 20px;
+}
+
+.center img{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* 右邊區塊 */
+.right{
+    width: 200px;
+    border-left: 1px solid #ddd;
+    padding: 10px;
 }
 
 /* 按鈕 */
 .btn{
-    height: 22px;                 /* ⭐ 高度 */
-    line-height: 22px;            /* 文字置中 */
-    padding: 0 10px;              /* 左右間距 */
-
-    background-color: #ffffff;    /* 背景 */
-    color: #212121;               /* 字色 */
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    background-color: #ffffff;
+    color: #212121;
     font-size: 13px;
-
-    border: 1px solid #2f2f2f;    /* 外框 */
-    border-radius: 8px;           /* ⭐ 圓角 */
-
+    border: 1px solid #2f2f2f;
+    border-radius: 8px;
     display: inline-block;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 </style>
 
@@ -32,7 +73,34 @@ body{
 
 <body>
 
-<div class="btn">查詢資料</div>
+<div class="container">
+
+    <!-- 左邊 -->
+    <div class="left">
+        <div class="item">20170102_1.jpg</div>
+        <div class="item">20170102_2.jpg</div>
+        <div class="item">20170102_3.png</div>
+        <div class="item">20170102_4.jpg</div>
+        <div class="item">20170102_5.jpg</div>
+        <div class="item">20170102_6.png</div>
+        <div class="item">20170102_7.png</div>
+        <div class="item">20170102_8.png</div>
+    </div>
+
+    <!-- 中間 -->
+    <div class="center">
+        <img src="https://picsum.photos/400/250">
+        <p>Default 450x240</p>
+    </div>
+
+    <!-- 右邊 -->
+    <div class="right">
+        <div class="btn">查詢資料</div>
+        <p>預覽圖片範圍</p>
+        <div style="border:1px solid pink; height:200px;"></div>
+    </div>
+
+</div>
 
 </body>
 </html>
