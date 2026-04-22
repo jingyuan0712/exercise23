@@ -2,70 +2,29 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Exercise Layout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Bootstrap Advanced</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- JS（讓 alert 可關閉） -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <style>
 body{
-    font-family: Roboto, Arial;
     background-color: #f5f5f5;
-    padding: 30px;
 }
 
-/* 整個框 */
-.container{
-    display: flex;
-    width: 900px;
-    border: 1px solid #ccc;
-    background-color: white;
-}
-
-/* 左邊清單 */
-.left{
-    width: 250px;
-    border-right: 1px solid #ddd;
-    padding: 10px;
-}
-
-.item{
-    background-color: #d8f5d0;
-    margin: 5px 0;
-    padding: 5px;
-    font-size: 12px;
-}
-
-/* 中間圖片 */
-.center{
-    width: 450px;
-    text-align: center;
+/* 卡片效果 */
+.card{
+    background: white;
     padding: 20px;
-}
-
-.center img{
-    width: 400px;
-    height: 250px;
-    object-fit: cover;
-}
-
-/* 右邊區塊 */
-.right{
-    width: 200px;
-    border-left: 1px solid #ddd;
-    padding: 10px;
-}
-
-/* 按鈕 */
-.btn{
-    height: 22px;
-    line-height: 22px;
-    padding: 0 10px;
-    background-color: #ffffff;
-    color: #212121;
-    font-size: 13px;
-    border: 1px solid #2f2f2f;
-    border-radius: 8px;
-    display: inline-block;
-    cursor: pointer;
-    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    margin-top: 30px;
 }
 </style>
 
@@ -75,29 +34,31 @@ body{
 
 <div class="container">
 
-    <!-- 左邊 -->
-    <div class="left">
-        <div class="item">20170102_1.jpg</div>
-        <div class="item">20170102_2.jpg</div>
-        <div class="item">20170102_3.png</div>
-        <div class="item">20170102_4.jpg</div>
-        <div class="item">20170102_5.jpg</div>
-        <div class="item">20170102_6.png</div>
-        <div class="item">20170102_7.png</div>
-        <div class="item">20170102_8.png</div>
-    </div>
+    <div class="card">
 
-    <!-- 中間 -->
-    <div class="center">
-        <img src="https://picsum.photos/400/250">
-        <p>Default 450x240</p>
-    </div>
+        <!-- Jumbotron -->
+        <div class="jumbotron text-center">
+            <h1>My First Bootstrap Page</h1>
+            <p>Welcome to my awesome UI</p>
+        </div>
 
-    <!-- 右邊 -->
-    <div class="right">
-        <div class="btn">查詢資料</div>
-        <p>預覽圖片範圍</p>
-        <div style="border:1px solid pink; height:200px;"></div>
+        <!-- Input -->
+        <div class="form-group">
+            <label>Input:</label>
+            <input type="text" class="form-control" placeholder="Enter something...">
+        </div>
+
+        <!-- Alert（可關閉） -->
+        <div class="alert alert-success alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Success!</strong> This is a successful alert.
+        </div>
+
+        <!-- Button -->
+        <button class="btn btn-primary">
+            Button <span class="badge">4</span>
+        </button>
+
     </div>
 
 </div>
